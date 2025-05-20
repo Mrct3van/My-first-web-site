@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+				  <meta charset="UTF-8">
+  <title>Mon Site Interactif</title>
+  <link rel="stylesheet" href="style.css">
+
+		<style type="text/css">
+	body {
+  font-family: Arial, sans-serif;
+  background-color: white;
+  color: #333;
+  text-align: center;
+  padding: 50px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+		</style>
+	</head>
+
+	<body>
+  <h1>Bienvenue sur mon site interactif !</h1>
+  <p id="message">Clique sur le bouton pour changer la couleur de fond !</p>
+  <button id="changeColorBtn">Changer la couleur</button>
+  <script src="script.js"></script>
+	</body>
+
+	<script>
+		const btn = document.getElementById("changeColorBtn");
+
+btn.addEventListener("click", () => {
+  const colors = ["#FFDDC1", "#C1FFD7", "#C1D4FF", "#F0C1FF", "#FFF7C1"];
+  const randomColor = colors[Math.floor(Math.random() * colors.length)];
+  document.body.style.backgroundColor = randomColor;
+});
+	</script>
+</html>
